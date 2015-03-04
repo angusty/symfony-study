@@ -15,7 +15,7 @@ Ibw\JobeetBundle\Entity\Affiliate:
             unique: true
         token:
             type: string
-            lenght: 255
+            length: 255
         is_active:
             type: boolean
             nullable: true
