@@ -125,7 +125,7 @@ class JobController extends Controller
 
         $editForm = $this->createEditForm($entity);
         $deleteForm = $this->createDeleteForm($id);
-
+//        \Kint::dump($editForm->createView());
         return $this->render('IbwJobeetBundle:Job:edit.html.twig', array(
             'entity'      => $entity,
             'edit_form'   => $editForm->createView(),
