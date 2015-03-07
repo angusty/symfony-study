@@ -1,5 +1,8 @@
 {% extends 'IbwJobeetBundle::layout.html.twig' %}
-
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/ibwjobeet/css/jobs.css') }}" type="text/css" media="all"/>
+{% endblock %}
 {% block body -%}
     <h1>Job list</h1>
 
@@ -67,3 +70,4 @@
         </li>
     </ul>
     {% endblock %}
+
