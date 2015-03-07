@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+            Jobeet - 你最好的找工作平台
+        {% endblock %}
+    </title>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('bundles/ibwjobeet/css/main.css') }}" type="text/css" media="all"/>
+    {% endblock %}
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}"/>
+</head>
+<body>
+<div id="container">
+    <div id="header">
+        <div class="content">
+            <h1><a href="{{ path('ibw_job') }}"><img src="{{ asset('bundles/ibwjobeet/images/logo.jpg') }}" alt="logo"/></a></h1>
+            <div id="sub_header">
+                <div class="post">
+                    <h2>寻找人</h2>
+                    <div><a href="{{ path('ibw_job') }}">发布招聘</a></div>
+                </div>
+                <div class="search">
+                    <h2>寻找工作</h2>
+                    <form action="">
+                        <input type="text" name="keywords" id="search_keywords"/>
+                        <input type="submit" value="搜索" />
+                        <div class="help">请输入一些关键字（城市，国家，地点，...）</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        {% for flashMessage in app.session.flashbag.get('notice') %}
+            <div class="flash_notice">
+                {{ flashMessage }}
+            </div>
+        {% endfor %}
+        {% for flashMessage in app.session.flashbag.get('error') %}
+            <div class="flash_error">
+                {{ flashMessage }}
+            </div>
+        {% endfor %}
+        <div class="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+    <div id="footer">
+        <div class="content">
+            <span class="symfony">
+                <img src="{{ asset('bundles/ibwjobeet/images/jobeet-min.png') }}" alt="来自"/>
+                来自<a href="http://angusty.com">
+                    <img src="{{ asset('bundles/ibwjobeet/images/symfony.gif') }}" alt="symfony"/>
+                </a>
+            </span>
+            <ul>
+                <li><a href="">关于 Jobeet</a></li>
+                <li class="feed"><a href="">Full feed</a></li>
+                <li><a href="">Jobeet API</a></li>
+                <li class="last"><a href="">Affiliates</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    {% block javascripts %}
+    {%  endblock %}
+</body>
+</html>
