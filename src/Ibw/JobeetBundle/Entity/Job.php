@@ -3,6 +3,7 @@
 namespace Ibw\JobeetBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Ibw\JobeetBundle\Utils\Jobeet;
 
 /**
  * Job
@@ -491,4 +492,40 @@ class Job
         // Add your code here
         $this->updated_at = new \DateTime();
     }
+
+    /**
+     * 定义虚拟接口 新建 \Ibw\JobeetBundle\Utils\Jobeet类;
+     * @return mixed|string
+     */
+    public function getCompanySlug()
+    {
+        return Jobeet::slugify($this->getCompany());
+    }
+
+    /**
+     * 定义虚拟接口 新建 \Ibw\JobeetBundle\Utils\Jobeet类;
+     * @return mixed|string
+     */
+    public function getPositionSlug()
+    {
+       return Jobeet::slugify($this->getPosition());
+    }
+
+    /**
+     * 定义虚拟接口 新建 \Ibw\JobeetBundle\Utils\Jobeet类;
+     * @return mixed|string
+     */
+    public function getLocationSlug()
+    {
+        return Jobeet::slugify($this->getLocation());
+    }
+
+
+
+
+
+
+
+
+
 }
