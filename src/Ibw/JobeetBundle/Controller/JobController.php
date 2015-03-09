@@ -22,9 +22,16 @@ class JobController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-
-        $entities = $em->getRepository('IbwJobeetBundle:Job')->findAll();
-
+        //\Kint::dump($em);
+        //ladybug_dump($em);
+        //$entities = $em->getRepository('IbwJobeetBundle:Job')->findAll();
+//        $query = $em->createQuery(
+//            'SELECT j FROM IbwJobeetBundle:Job j WHERE j.created_at > :date'
+//        )->setParameter('date', date('Y-m-d H:i:s', time()-86400*30));
+        $query = $em->createQuery(
+            'SELECT j FROM IbwJobeetBundle:Job j WHERE   j.expires_at> :date'
+        )->setParameter('date', date('Y-m-d H:i:s', time()));
+        $entities = $query->getResult();
         return $this->render('IbwJobeetBundle:Job:index.html.twig', array(
             'entities' => $entities,
         ));

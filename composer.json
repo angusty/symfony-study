@@ -22,7 +22,8 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "doctrine/doctrine-fixtures-bundle": "dev-master",
         "doctrine/data-fixtures": "dev-master",
-        "raveren/kint": "0.9.*@dev"
+        "raveren/kint": "0.9.*@dev",
+        "raulfraile/ladybug": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [
