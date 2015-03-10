@@ -67,3 +67,7 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+#自定义常量
+parameters:
+    max_jobs_on_homepage: 10           #首页显示多少条
