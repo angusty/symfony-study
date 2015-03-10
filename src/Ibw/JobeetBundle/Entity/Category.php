@@ -3,7 +3,7 @@
 namespace Ibw\JobeetBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
+use Ibw\JobeetBundle\Utils\Jobeet;
 /**
  * Category
  */
@@ -30,6 +30,8 @@ class Category
     private $affiliates;
 
     private $active_jobs;
+
+    private $more_jobs;
 
     /**
      * Constructor
@@ -152,5 +154,60 @@ class Category
     public function getActiveJobs()
     {
         return $this->active_jobs;
+    }
+
+//    /**
+//     * 转换非ASII为-
+//     * @return mixed|string
+//     */
+//    public function getSlug()
+//    {
+//        return Jobeet::slugify($this->getName());
+//    }
+
+    public function setMoreJobs($jobs)
+    {
+        $this->more_jobs = $jobs >= 0 ? $jobs : 0;
+    }
+
+    public function getMoreJobs()
+    {
+        return $this->more_jobs;
+    }
+    /**
+     * @var string
+     */
+    private $slug;
+
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     * @return Category
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string 
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+    /**
+     * @ORM\PrePersist
+     */
+    public function setSlugValue()
+    {
+        // Add your code here
+        $this->slug = Jobeet::slugify($this->getName());
     }
 }

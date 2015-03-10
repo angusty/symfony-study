@@ -1,0 +1,30 @@
+{% extends 'IbwJobeetBundle::layout.html.twig' %}
+{% block title %}
+    在{{ category.name }}分类中的工作
+{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/ibwjobeet/css/jobs.css') }}"/>
+{% endblock %}
+{% block content %}
+    <div class="category">
+        <div class="feed">
+            <a href="">Feed</a>
+        </div>
+        <h1>{{ category.name }}</h1>
+    </div>
+    {#<table class="jobs">#}
+        {#{% for entity in category.activejobs %}#}
+            {#<tr class="{{ cycle(['even', 'odd'], loop.index) }}">#}
+                {#<td class="location">{{ entity.location }}</td>#}
+                {#<td class="position">#}
+                    {#<a href="{{ path('ibw_job_show', { 'id': entity.id, 'company': entity.companyslug, 'location': entity.locationslug, 'position': entity.positionslug }) }}">#}
+                        {#{{ entity.position }}#}
+                    {#</a>#}
+                {#</td>#}
+                {#<td class="company">{{ entity.company }}</td>#}
+            {#</tr>#}
+        {#{% endfor %}#}
+    {#</table>#}
+    {{ include ('IbwJobeetBundle:Job:list.html.twig', {'jobs': category.activejobs}) }}
+{% endblock %}
