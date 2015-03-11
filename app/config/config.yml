@@ -71,3 +71,4 @@ swiftmailer:
 #自定义常量
 parameters:
     max_jobs_on_homepage: 10           #首页显示多少条
+    max_jobs_on_category: 20           #分类页面显示多少条

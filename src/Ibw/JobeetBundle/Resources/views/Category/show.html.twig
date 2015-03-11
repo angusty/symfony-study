@@ -27,4 +27,33 @@
         {#{% endfor %}#}
     {#</table>#}
     {{ include ('IbwJobeetBundle:Job:list.html.twig', {'jobs': category.activejobs}) }}
+    {% if last_page > 1 %}
+        <div class="pagination">
+            <a href="{{ path('ibw_category', {'slug': category.slug, 'page':1}) }}">
+                <img src="{{ asset('bundles/ibwjobeet/images/first.png') }}" alt="第一页"/>
+            </a>
+            <a href="{{ path('ibw_category', {'slug': category.slug, 'page': previous_page}) }}">
+                <img src="" alt="前一页"/>
+            </a>
+            {% for page in 1..last_page %}
+                {% if page == current_page %}
+                    {{ page }}
+                {% else %}
+                    <a href="{{ path('ibw_category', {'slug':category.slug, 'page':page}) }}">{{ page }}</a>
+                {% endif %}
+            {% endfor %}
+            <a href="{{ path('ibw_category', {'slug': category.slug, 'page': next_page}) }}">
+                <img src="{{ asset('bundles/ibwjobeet/images/next.png') }}" alt="下一页"/>
+            </a>
+            <a href="{{ path('ibw_category', {'slug': category.slug, 'page': last_page}) }}">
+                <img src="{{ asset('bundles/ibwjobeet/images/last.png') }}" alt="最后一页"/>
+            </a>
+        </div>
+    {% endif %}
+    <div class="pagination_desc">
+        总共<strong>{{ total_jobs }}</strong> 个工作机会在这个分类
+        {% if last_page>1 %}
+            -页 <strong>{{ current_page }}/{{ last_page }}</strong>
+        {% endif %}
+    </div>
 {% endblock %}
