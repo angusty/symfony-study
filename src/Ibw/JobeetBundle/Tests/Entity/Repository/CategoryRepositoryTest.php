@@ -31,10 +31,10 @@ class CategoryRepositoryTest extends WebTestCase
         $command->run($input, new NullOutput());
 
         // we have to close the connection after dropping the database so we don't get "No database selected" error
-        $connection = $this->application->getKernel()->getContainer()->get('doctrine')->getConnection();
-        if ($connection->isConnected()) {
-            $connection->close();
-        }
+//        $connection = $this->application->getKernel()->getContainer()->get('doctrine')->getConnection();
+//        if ($connection->isConnected()) {
+//            $connection->close();
+//        }
 
         // create the database
         $command = new CreateDatabaseDoctrineCommand();

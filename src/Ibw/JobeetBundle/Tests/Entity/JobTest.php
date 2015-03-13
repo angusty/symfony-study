@@ -5,10 +5,12 @@ use Doctrine\Bundle\DoctrineBundle\Command\CreateDatabaseDoctrineCommand;
 use Doctrine\Bundle\DoctrineBundle\Command\DropDatabaseDoctrineCommand;
 use Doctrine\Bundle\DoctrineBundle\Command\Proxy\CreateSchemaDoctrineCommand;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-use Symfony\Component\Console\Application;
+#use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Output\NullOutput;
-
+use Symfony\Bundle\FrameworkBundle\Console\Application;
+use Ibw\JobeetBundle\Utils\Jobeet;
+use Ibw\JobeetBundle\Entity\Job;
 class JobTest extends WebTestCase
 {
     private $em;
@@ -19,7 +21,7 @@ class JobTest extends WebTestCase
         static::$kernel = static::createKernel();
         static::$kernel->boot();
 
-        $this->application = new Application();
+        $this->application = new Application(static::$kernel);
 
         //drop the databases
         $command = new DropDatabaseDoctrineCommand();
@@ -29,10 +31,10 @@ class JobTest extends WebTestCase
             '--force' => true
         ));
         $command->run($input, new NullOutput());
-//        $connection = $this->application->getKernel()->getContainer()->get('doctrine')->getConnection();
-//        if ($connection->isConnected()) {
-//            $connection->close();
-//        }
+        $connection = $this->application->getKernel()->getContainer()->get('doctrine')->getConnection();
+        if ($connection->isConnected()) {
+            $connection->close();
+        }
         //create the database
         $command = new CreateDatabaseDoctrineCommand();
         $this->application->add($command);
@@ -101,5 +103,4 @@ class JobTest extends WebTestCase
         parent::tearDown();
         $this->em->close();
     }
-}
 }
