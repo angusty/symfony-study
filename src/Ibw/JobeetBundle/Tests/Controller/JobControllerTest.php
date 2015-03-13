@@ -2,54 +2,17 @@
 
 namespace Ibw\JobeetBundle\Tests\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class JobControllerTest extends WebTestCase
+use Ibw\JobeetBundle\Tests\ControllerCase;
+
+class JobControllerTest extends ControllerCase
 {
-
-    public function testCompleteScenario()
+    public function testIndex()
     {
-        // Create a new client to browse the application
         $client = static::createClient();
+        $crawler = $client->request('GET', '/');
 
-        // Create a new entry in the database
-        $crawler = $client->request('GET', '/job/');
-        $this->assertEquals(200, $client->getResponse()->getStatusCode(), "Unexpected HTTP status code for GET /job/");
-//        $crawler = $client->click($crawler->selectLink('Create a new entry')->link());
-//
-//        // Fill in the form and submit it
-//        $form = $crawler->selectButton('Create')->form(array(
-//            'ibw_jobeetbundle_job[field_name]'  => 'Test',
-//            // ... other fields to fill
-//        ));
-//
-//        $client->submit($form);
-//        $crawler = $client->followRedirect();
-//
-//        // Check data in the show view
-//        $this->assertGreaterThan(0, $crawler->filter('td:contains("Test")')->count(), 'Missing element td:contains("Test")');
-//
-//        // Edit the entity
-//        $crawler = $client->click($crawler->selectLink('Edit')->link());
-//
-//        $form = $crawler->selectButton('Update')->form(array(
-//            'ibw_jobeetbundle_job[field_name]'  => 'Foo',
-//            // ... other fields to fill
-//        ));
-//
-//        $client->submit($form);
-//        $crawler = $client->followRedirect();
-//
-//        // Check the element contains an attribute with value equals "Foo"
-//        $this->assertGreaterThan(0, $crawler->filter('[value="Foo"]')->count(), 'Missing element [value="Foo"]');
-//
-//        // Delete the entity
-//        $client->submit($crawler->selectButton('Delete')->form());
-//        $crawler = $client->followRedirect();
-//
-//        // Check the entity has been delete on the list
-//        $this->assertNotRegExp('/Foo/', $client->getResponse()->getContent());
+        $this->assertEquals('Ibw\JobeetBundle\Controller\JobController::indexAction', $client->getRequest()->attributes->get('_controller'));
+        $this->assertTrue($crawler->filter('.jobs td.position:contains("Expired")')->count() == 0);
     }
-
-
 }
