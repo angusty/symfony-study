@@ -20,7 +20,7 @@
         {#</table>#}
         {% for category in categories %}
             <div>
-                <div class="category">
+                <div class="category_{{ category.name|strtolower }}">
                     <div class="feed">
                         <a href="">Feed</a>
                     </div>

@@ -1,0 +1,6 @@
+services:
+    app.twig_extension:
+        class: Ibw\JobeetBundle\Twig\IbwJobeetExtension
+        public: false
+        tags:
+            - {name: twig.extension}
