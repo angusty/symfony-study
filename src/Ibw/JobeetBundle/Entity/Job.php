@@ -129,6 +129,18 @@ class Job
         return $this->type;
     }
 
+    //Job可以选择的类型
+    public static function getTypes()
+    {
+        return array('full-time' => 'Full time', 'part-time'=>'Part time', 'freelance' => 'Freelance');
+    }
+
+    //验证type表单值域的有效性
+    public static function getTypeValues()
+    {
+        return array_keys(self::getTypes());
+    }
+
     /**
      * Set company
      *

@@ -15,22 +15,23 @@ class JobType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('type')
+            ->add('type', 'choice', array('choices'=>Job::getTypes(), 'expanded'=>true))
+            ->add('category')
             ->add('company')
-            ->add('logo')
+            ->add('logo', null, array('label'=>'Company logo'))
             ->add('url')
             ->add('position')
             ->add('location')
             ->add('description')
-            ->add('how_to_apply')
+            ->add('how_to_apply', null, array('label'=>'how to apply?'))
             ->add('token')
-            ->add('is_public')
-            ->add('is_activated')
+            ->add('is_public', null, array('label'=>'Public?'))
+//            ->add('is_activated')
             ->add('email')
-            ->add('expires_at')
-            ->add('created_at')
-            ->add('updated_at')
-            ->add('category')
+//            ->add('expires_at')
+//            ->add('created_at')
+//            ->add('updated_at')
+
         ;
     }
     
@@ -49,6 +50,7 @@ class JobType extends AbstractType
      */
     public function getName()
     {
-        return 'ibw_jobeetbundle_job';
+//        return 'ibw_jobeetbundle_job';
+        return 'job';
     }
 }
