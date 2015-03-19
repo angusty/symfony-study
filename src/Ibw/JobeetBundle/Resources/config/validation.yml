@@ -5,7 +5,7 @@ Ibw\JobeetBundle\Entity\Job:
         type:
             - NotBlank: ~
             - Choice: { callback: getTypeValues }
-         company:
+        company:
             - NotBlank: ~
         position:
             - NotBlank: ~
