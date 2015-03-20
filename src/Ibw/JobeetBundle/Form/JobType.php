@@ -29,6 +29,7 @@ class JobType extends AbstractType
             ->add('is_public', null, array('label'=>'Public?'))
 //            ->add('is_activated')
             ->add('email')
+            ->add('file', 'file', array('label'=>'Company logo', 'required'=>false))
 //            ->add('expires_at')
 //            ->add('created_at')
 //            ->add('updated_at')

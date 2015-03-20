@@ -95,6 +95,7 @@ class Job
      */
     private $category;
 
+    public $file;
 
     /**
      * Get id
@@ -127,6 +128,18 @@ class Job
     public function getType()
     {
         return $this->type;
+    }
+
+    //Job可以选择的类型
+    public static function getTypes()
+    {
+        return array('full-time' => 'Full time', 'part-time'=>'Part time', 'freelance' => 'Freelance');
+    }
+
+    //验证type表单值域的有效性
+    public static function getTypeValues()
+    {
+        return array_keys(self::getTypes());
     }
 
     /**
@@ -533,5 +546,53 @@ class Job
         }
     }
 
+    protected function getUploadDir()
+    {
+        return 'uploads/jobs';
+    }
+
+    protected function getUploadRootDir()
+    {
+        return __DIR__ . '/../../../../web/' . $this->getUploadDir();
+    }
+
+    public function getWebPath()
+    {
+        return null === $this->logo ? null : $this->getUploadDir() . '/' .$this->logo;
+    }
+
+    public function getAbsolutePath()
+    {
+        return null === $this->logo ? null : $this->getUploadRootDir() . '/' . $this->logo;
+    }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,15 +1,135 @@
 {% extends 'IbwJobeetBundle::layout.html.twig' %}
 
-{% block content -%}
-    <h1>Job creation</h1>
+{#{% block content -%}#}
+    {#<h1>Job creation</h1>#}
 
-    {{ form(form) }}
+    {#{{ form(form) }}#}
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('ibw_job') }}">
-            Back to the list
-        </a>
-    </li>
-</ul>
-{% endblock %}
+        {#<ul class="record_actions">#}
+    {#<li>#}
+        {#<a href="{{ path('ibw_job') }}">#}
+            {#Back to the list#}
+        {#</a>#}
+    {#</li>#}
+{#</ul>#}
+{#{% endblock %}#}
+
+{% form_theme form_self %}
+    {% block form_errors %}
+        {% spaceless %}
+            {% if errors|length>0 %}
+                <ul class="error_list">
+                    {% for error in errrors %}
+                    <li>{{ error.messageTemplate|trans(error.messageParameters, 'validators') }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endspaceless %}
+    {% endblock form_errors %}
+
+    {% block stylesheets %}
+        {{ parent() }}
+        <link rel="stylesheet" href="{{ asset('bundles/ibwjobeet/css/job.css') }}" type="text/css" media="all"/>
+    {% endblock %}
+
+    {% block content %}
+        <h1>创建工作</h1>
+        <form action="{{ path('ibw_job_create') }}" method="post" {{ form_enctype(form) }}>
+            <table id="job_form">
+                <tfoot>
+                    <tr>
+                        <td colspan="2"><input value="预览你的工作" type="submit"/></td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <th>{{ form_label(form.category) }}</th>
+                        <td>
+                            {{ form_errors(form.category) }}
+                            {{ form_widget(form.category) }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>{{ form_label(form.type) }}</th>
+                        <td>
+                            {{ form_errors(form.type) }}
+                            {{ form_widget(form.type) }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>{{ form_label(form.company) }}</th>
+                        <td>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        {{ form_end('form') }}
+    {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

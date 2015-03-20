@@ -95,6 +95,7 @@ class Job
      */
     private $category;
 
+    public $file;
 
     /**
      * Get id
@@ -545,5 +546,80 @@ class Job
         }
     }
 
+    protected function getUploadDir()
+    {
+        return 'uploads/jobs';
+    }
 
+    protected function getUploadRootDir()
+    {
+        return __DIR__ . '/../../../../web/' . $this->getUploadDir();
+    }
+
+    public function getWebPath()
+    {
+        return null === $this->logo ? null : $this->getUploadDir() . '/' .$this->logo;
+    }
+
+    public function getAbsolutePath()
+    {
+        return null === $this->logo ? null : $this->getUploadRootDir() . '/' . $this->logo;
+    }
+
+
+    /**
+     * @ORM\PrePersist
+     */
+    public function preUpload()
+    {
+        // Add your code here
+        if (null !== $this->file) {
+            $this->logo = uniqid() . '.' . $this->file->guessExtension();
+        }
+    }
+
+    /**
+     * @ORM\PostPersist
+     */
+    public function upload()
+    {
+        // Add your code here
+        if (null === $this->file) {
+            return ;
+        }
+
+        $this->file->move($this->getUploadRootDir(), $this->logo);
+        unset($this->file);
+    }
+
+    /**
+     * @ORM\PostRemove
+     */
+    public function removeUpload()
+    {
+        // Add your code here
+        if (file_exists($this->file)) {
+            if ($this->file = $this->getAbsolutePath()) {
+                unlink($this->file);
+            }
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
