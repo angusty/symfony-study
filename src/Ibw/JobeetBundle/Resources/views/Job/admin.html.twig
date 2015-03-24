@@ -1,0 +1,32 @@
+<div id="job_actions">
+    <h3>管理员</h3>
+    <ul>
+        {% if not job.isActivated %}
+        <li><a href="{{ path('ibw_job_edit', {'token': job.token}) }}">编辑</a></li>
+        <li><a href="{{ path('ibw_job_edit', {'token': job.token}) }}">公开</a></li>
+        {% endif %}
+        <li>
+            <form action="{{ path('ibw_job_delete', {'token': job.token}) }}" method="post">
+                {{ form_widget(delete_form) }}
+                <button type="submit" onclick="if(!confirm('你确定删除吗?')) {return false;}">删除</button>
+            </form>
+        </li>
+        {% if job.isActivated %}
+            <li {% if job.expiresSoon %} class="pxpires_soon" {% endif %}>
+                {% if job.isExpired %}
+                    Expires
+                {% else %}
+                    Expires in <strong>{{ job.getDaysBeforeExpires }}</strong> days
+                {% endif %}
+
+                {% if job.expiresSoon %}
+                    - <a href="">Extend</a> for another 30 days
+                {% endif %}
+            </li>
+        {% endif %}
+        <li>
+            [Bookmark this <a href="{{ url('ibw_job_preview'), {'token': job.token, 'company': job.companyslug, 'location': job.locationslug, 'position': job.positionslug} }}">URL</a>]
+            为了未来管理这些工作
+        </li>
+    </ul>
+</div>

@@ -615,4 +615,39 @@ class Job
             $this->token = sha1($this->getEmail() . mt_rand(11111, 99999));
         }
     }
+
+    public function getDaysBeforeExpires()
+    {
+        return ceil(($this->getExpiresAt()->format('U') - time())/86400);
+    }
+
+    public function expiresSoon()
+    {
+        return $this->getDaysBeforeExpires() < 5;
+    }
+    public function isExpired()
+    {
+        return $this->getDaysBeforeExpires() < 0;
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
