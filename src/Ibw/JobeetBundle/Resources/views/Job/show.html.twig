@@ -31,9 +31,9 @@
         <div class="meta">
             <small>申请日期 {{ entity.createdat|date('Y-m-d H:i') }}</small>
         </div>
-        <div style="padding:20px 0">
-            <a href="{{ path('ibw_job_edit', {'token':entity.token}) }}">编辑</a>
-        </div>
+        {#<div style="padding:20px 0">#}
+            {#<a href="{{ path('ibw_job_edit', {'token':entity.token}) }}">编辑</a>#}
+        {#</div>#}
     </div>
 {% endblock %}
 
