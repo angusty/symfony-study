@@ -163,7 +163,7 @@ class JobController extends Controller
         }
 
         $deleteForm = $this->createDeleteForm($entity->getToken());
-        $pulishForm = $this->createPulishForm($entity->getToken());
+        $pulishForm = $this->createPublishForm($entity->getToken());
         return $this->render('IbwJobeetBundle:Job:show.html.twig', array(
             'entity'      => $entity,
             'delete_form' => $deleteForm->createView(),
@@ -215,12 +215,7 @@ class JobController extends Controller
         return $form;
     }
 
-    private function createPublishForm($token)
-    {
-        return $this->createFormBuilder(array('token'=>$token))
-            ->add('token', 'hidden')
-            ->getForm();
-    }
+
     /**
      * Edits an existing Job entity.
      *
@@ -308,6 +303,15 @@ class JobController extends Controller
             'position' => $entity->getPositionSlug()
         )));
     }
+
+
+    private function createPublishForm($token)
+    {
+        return $this->createFormBuilder(array('token'=>$token))
+            ->add('token', 'hidden')
+            ->getForm();
+    }
+
 
     /**
      * Creates a form to delete a Job entity by id.

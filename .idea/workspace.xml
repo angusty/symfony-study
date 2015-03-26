@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="341339cc-e8ed-4dc2-afe8-b2788a267725" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ibw/JobeetBundle/Entity/Job.php" afterPath="$PROJECT_DIR$/src/Ibw/JobeetBundle/Entity/Job.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ibw/JobeetBundle/Controller/JobController.php" afterPath="$PROJECT_DIR$/src/Ibw/JobeetBundle/Controller/JobController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/SymfonyRequirements.php" afterPath="$PROJECT_DIR$/app/SymfonyRequirements.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ibw/JobeetBundle/Resources/views/Job/admin.html.twig" afterPath="$PROJECT_DIR$/src/Ibw/JobeetBundle/Resources/views/Job/admin.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ibw/JobeetBundle/Resources/config/routing/job.yml" afterPath="$PROJECT_DIR$/src/Ibw/JobeetBundle/Resources/config/routing/job.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ibw/JobeetBundle/Resources/views/Job/show.html.twig" afterPath="$PROJECT_DIR$/src/Ibw/JobeetBundle/Resources/views/Job/show.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ibw/JobeetBundle/Entity/Repository/JobRepository.php" afterPath="$PROJECT_DIR$/src/Ibw/JobeetBundle/Entity/Repository/JobRepository.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="symfony-study.iws" />
@@ -36,28 +33,28 @@
       <file leaf-file-name="Job.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Ibw/JobeetBundle/Entity/Job.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="380.16666" vertical-offset="10834" max-vertical-offset="11844">
-              <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+            <state vertical-scroll-proportion="-12.083333" vertical-offset="11104" max-vertical-offset="11916">
+              <caret line="634" column="36" selection-start-line="634" selection-start-column="36" selection-end-line="634" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JobRepository.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="JobRepository.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Ibw/JobeetBundle/Entity/Repository/JobRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.76" vertical-offset="240" max-vertical-offset="1512">
-              <caret line="46" column="53" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.098802395" vertical-offset="258" max-vertical-offset="1548">
+              <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JobController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="JobController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Ibw/JobeetBundle/Controller/JobController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.0778443" vertical-offset="4734" max-vertical-offset="5994">
-              <caret line="227" column="49" selection-start-line="227" selection-start-column="41" selection-end-line="227" selection-end-column="49" />
+            <state vertical-scroll-proportion="-3.92" vertical-offset="4952" max-vertical-offset="6066">
+              <caret line="290" column="0" selection-start-line="290" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -66,7 +63,7 @@
       <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Ibw/JobeetBundle/Resources/views/Job/show.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.36" vertical-offset="398" max-vertical-offset="1314">
+            <state vertical-scroll-proportion="0.0" vertical-offset="398" max-vertical-offset="1314">
               <caret line="37" column="14" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
               <folding />
             </state>
@@ -76,7 +73,7 @@
       <file leaf-file-name="admin.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Ibw/JobeetBundle/Resources/views/Job/admin.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.083334" vertical-offset="196" max-vertical-offset="864">
+            <state vertical-scroll-proportion="0.0" vertical-offset="196" max-vertical-offset="864">
               <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
               <folding />
             </state>
@@ -86,7 +83,7 @@
       <file leaf-file-name="job.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Ibw/JobeetBundle/Resources/config/routing/job.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.538462" vertical-offset="342" max-vertical-offset="1008">
+            <state vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="1008">
               <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
               <folding />
             </state>
@@ -115,18 +112,19 @@
         <option value="$PROJECT_DIR$/src/Ibw/JobeetBundle/Tests/Controller/JobControllerTest.php" />
         <option value="$PROJECT_DIR$/src/Ibw/JobeetBundle/Resources/config/validation.yml" />
         <option value="$PROJECT_DIR$/src/Ibw/JobeetBundle/Form/JobType.php" />
-        <option value="$PROJECT_DIR$/src/Ibw/JobeetBundle/Entity/Job.php" />
         <option value="$PROJECT_DIR$/src/Ibw/JobeetBundle/Resources/views/Job/show.html.twig" />
         <option value="$PROJECT_DIR$/src/Ibw/JobeetBundle/Resources/config/routing/job.yml" />
         <option value="$PROJECT_DIR$/src/Ibw/JobeetBundle/Resources/views/Job/admin.html.twig" />
         <option value="$PROJECT_DIR$/src/Ibw/JobeetBundle/Controller/JobController.php" />
+        <option value="$PROJECT_DIR$/src/Ibw/JobeetBundle/Entity/Job.php" />
+        <option value="$PROJECT_DIR$/src/Ibw/JobeetBundle/Entity/Repository/JobRepository.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="40" />
-    <option name="y" value="340" />
+    <option name="x" value="257" />
+    <option name="y" value="449" />
     <option name="width" value="1563" />
     <option name="height" value="812" />
   </component>
@@ -156,6 +154,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -366,7 +365,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -408,15 +406,15 @@
       <BehatRunner />
       <method />
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
       <tasks />
       <pass-parent-env-vars>false</pass-parent-env-vars>
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -435,7 +433,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="40" y="340" width="1563" height="812" extended-state="0" />
+    <frame x="257" y="449" width="1563" height="812" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -445,19 +443,19 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24983564" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27284682" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27613413" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32974428" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -610,13 +608,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.lock">
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2185129" vertical-offset="0" max-vertical-offset="31932">
           <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
         </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config.yml">
@@ -778,23 +776,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.650289" vertical-offset="0" max-vertical-offset="692">
           <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ibw/JobeetBundle/Entity/Repository/JobRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.76" vertical-offset="240" max-vertical-offset="1512">
-          <caret line="46" column="53" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ibw/JobeetBundle/Entity/Job.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="380.16666" vertical-offset="10834" max-vertical-offset="11844">
-          <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -816,7 +797,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Ibw/JobeetBundle/Resources/views/Job/show.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.36" vertical-offset="398" max-vertical-offset="1314">
+        <state vertical-scroll-proportion="0.0" vertical-offset="398" max-vertical-offset="1314">
           <caret line="37" column="14" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
           <folding />
         </state>
@@ -824,7 +805,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Ibw/JobeetBundle/Resources/config/routing/job.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.538462" vertical-offset="342" max-vertical-offset="1008">
+        <state vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="1008">
           <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
           <folding />
         </state>
@@ -840,7 +821,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Ibw/JobeetBundle/Resources/views/Job/admin.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.083334" vertical-offset="196" max-vertical-offset="864">
+        <state vertical-scroll-proportion="0.0" vertical-offset="196" max-vertical-offset="864">
           <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
           <folding />
         </state>
@@ -848,8 +829,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Ibw/JobeetBundle/Controller/JobController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.0778443" vertical-offset="4734" max-vertical-offset="5994">
-          <caret line="227" column="49" selection-start-line="227" selection-start-column="41" selection-end-line="227" selection-end-column="49" />
+        <state vertical-scroll-proportion="-3.92" vertical-offset="4952" max-vertical-offset="6066">
+          <caret line="290" column="0" selection-start-line="290" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ibw/JobeetBundle/Entity/Job.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.083333" vertical-offset="11104" max-vertical-offset="11916">
+          <caret line="634" column="36" selection-start-line="634" selection-start-column="36" selection-end-line="634" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ibw/JobeetBundle/Entity/Repository/JobRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.098802395" vertical-offset="258" max-vertical-offset="1548">
+          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
           <folding />
         </state>
       </provider>

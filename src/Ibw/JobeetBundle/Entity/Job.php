@@ -630,6 +630,10 @@ class Job
         return $this->getDaysBeforeExpires() < 0;
     }
 
+    public function publish()
+    {
+        $this->setIsActivated(true);
+    }
 }
 
 
