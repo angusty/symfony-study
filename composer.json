@@ -23,7 +23,9 @@
         "doctrine/doctrine-fixtures-bundle": "dev-master",
         "doctrine/data-fixtures": "dev-master",
         "raveren/kint": "0.9.*@dev",
-        "raulfraile/ladybug": "dev-master"
+        "raulfraile/ladybug": "dev-master",
+        "sonata-project/admin-bundle": "~2.3",
+        "sonata-project/doctrine-orm-admin-bundle": "~2.3"
     },
     "scripts": {
         "post-install-cmd": [
