@@ -12,8 +12,8 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        $test = $this->get('app.twig_extension');
-        ladybug_dump($test);
+        $test = $this->container->getParameter('database_driver');
+        //ladybug_dump($test);
         return $this->render('default/index.html.twig');
     }
 }
