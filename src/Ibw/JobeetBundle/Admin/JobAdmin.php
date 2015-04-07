@@ -76,7 +76,7 @@ class JobAdmin extends Admin
             ->add('category')
             ->add('type')
             ->add('company')
-            ->add('webPath', 'string', array('template' => 'IbwJobeetBundle:JobAdmin:list_image.html.twig'))
+            //->add('webPath', 'string', array('template' => 'IbwJobeetBundle:JobAdmin:list_image.html.twig'))
             ->add('url')
             ->add('position')
             ->add('location')
@@ -89,6 +89,25 @@ class JobAdmin extends Admin
             ->add('expires_at')
         ;
     }
+
+    //重写 getBatchActions 方法 批量操作
+    public function getBatchActions()
+    {
+        $actions = parent::getBatchActions();
+        if($this->hasRoute('edit') && $this->isGranted('EDIT') && $this->hasRoute('delete') && $this->isGranted('DELETE')) {
+            $actions['extend'] = array(
+                'label' => 'Extend',
+                'ask_confirmation' => true
+            );
+            $actions['deleteNeverActivated'] = array(
+                'label'            => 'Delete never activated jobs',
+                'ask_confirmation' => true // If true, a confirmation will be asked before performing the action
+            );
+        }
+        return $actions;
+    }
+
+
 }
 
 
