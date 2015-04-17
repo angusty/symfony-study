@@ -10,4 +10,9 @@ class DefaultController extends Controller
     {
         return $this->render('IbwJobeetBundle:Default:index.html.twig', array('name' => $name));
     }
+
+    public function loginAction()
+    {
+        return ;
+    }
 }

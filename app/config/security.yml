@@ -10,23 +10,28 @@ security:
         in_memory:
             memory:
                 users:
-                    user:  { password: userpass, roles: [ 'ROLE_USER' ] }
-                    admin: { password: adminpass, roles: [ 'ROLE_ADMIN' ] }
-
+#                    user:  { password: userpass, roles: [ 'ROLE_USER' ] }
+#                    admin: { password: adminpass, roles: [ 'ROLE_ADMIN' ] }
+                    admin: { password: adminpass, roles: ['ROLE_ADMIN'] }
     firewalls:
         dev:
             pattern:  ^/(_(profiler|wdt)|css|images|js)/
             security: false
 
-        login:
-            pattern:  ^/demo/secured/login$
-            security: false
+#        login:
+#            pattern:  ^/demo/secured/login$
+#            security: false
 
         secured_area:
-            pattern:    ^/demo/secured/
+#            pattern:    ^/demo/secured/
+            pattern:    ^/
+            anonymous: ~
             form_login:
-                check_path: _security_check
-                login_path: _demo_login
+#                check_path: _security_check
+                check_path: /login_check
+                login_path: /login
+                default_target_path: ibw_jobeet_homepage
+#                login_path: _demo_login
             logout:
                 path:   _demo_logout
                 target: _demo
@@ -35,5 +40,7 @@ security:
             #    realm: "Secured Demo Area"
 
     access_control:
-        - { path: ^/demo/secured/hello/admin/, roles: ROLE_ADMIN }
+        - { path: ^/admin, roles: ROLE_ADMIN}
+
+#        - { path: ^/demo/secured/hello/admin/, roles: ROLE_ADMIN }
         #- { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
