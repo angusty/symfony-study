@@ -16,7 +16,6 @@ class DefaultController extends Controller
     {
         $request = $this->getRequest();
         $session = $request->getSession();
-
         if ($request->attributes->has(SecurityContext::AUTHENTICATION_ERROR)) {
             $error = $request->attributes->get(SecurityContext::AUTHENTICATION_ERROR);
         } else {
