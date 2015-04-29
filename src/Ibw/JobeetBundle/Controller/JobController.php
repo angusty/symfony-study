@@ -21,6 +21,9 @@ class JobController extends Controller
      */
     public function indexAction()
     {
+        $factory = $this->container->get('security.encoder_factory');
+        //ladybug_dump($factory);
+        //echo hash('sha512', 'admin');
         $em = $this->getDoctrine()->getManager();
         //\Kint::dump($em);
         //ladybug_dump($em);
