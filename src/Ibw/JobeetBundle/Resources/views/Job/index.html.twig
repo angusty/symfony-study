@@ -22,7 +22,7 @@
             <div>
                 <div class="category_{{ category.name|strtolower }}">
                     <div class="feed">
-                        <a href="">Feed</a>
+                        <a href="{{ path('IbwJobeetBundle_category', {'slug': category.slug, '_format': 'atom'}) }}">Feed</a>
                     </div>
                     <h1><a href="{{ path('ibw_category', {'slug': category.slug}) }}">{{ category.name }}</a></h1>
                 </div>

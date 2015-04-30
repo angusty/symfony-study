@@ -9,9 +9,24 @@
         <link rel="stylesheet" href="{{ asset('bundles/ibwjobeet/css/main.css') }}" type="text/css" media="all"/>
     {% endblock %}
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}"/>
+    <link rel="application/atom+xml" title="最近工作" href="{{ url('ibw_job', {'_format':'atom'}) }}"/>
 </head>
 <body>
 <div id="container">
+
+    <div id="job_history">
+        最近浏览的工作
+        <ul>
+            {% for job in app.session.get('job_history') %}
+            <li>
+                <a href="{{ path('ibw_job_show', {'id': job.id, company: job.companyslug, 'location': job.locationslug, 'position': job.positionslug } ) }}">
+                    {{ job.position }} - {{ job.company }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
     <div id="header">
         <div class="content">
             <h1><a href="{{ path('ibw_jobeet_homepage') }}"><img src="{{ asset('bundles/ibwjobeet/images/logo.jpg') }}" alt="logo"/></a></h1>

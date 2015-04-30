@@ -3,12 +3,15 @@
 namespace Ibw\JobeetBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\EquatableInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * User
  */
-class User implements  UserInterface
+class User implements
+    UserInterface,
+    EquatableInterface
 {
 
     /**
@@ -98,10 +101,14 @@ class User implements  UserInterface
 
     }
 
-    public function equals(User $user)
+//    public function equals(User $user)
+//    {
+//        return $user->getUsername() == $this->getUsername();
+//    }
+
+    public function isEqualTo(UserInterface $user)
     {
         return $user->getUsername() == $this->getUsername();
     }
-
 
 }

@@ -5,8 +5,11 @@ namespace Ibw\JobeetBundle\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
+
+use Ibw\JobeetBundle\Entity\User;
 use Ibw\JobeetBundle\Entity\Job;
 use Ibw\JobeetBundle\Form\JobType;
+use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Job controller.
@@ -15,6 +18,29 @@ use Ibw\JobeetBundle\Form\JobType;
 class JobController extends Controller
 {
 
+    public function testAction()
+    {
+        //$em = $this->container->get('doctrine')->getManager();
+//        $username = 'admin_test';
+//        $password = 'admin';
+//        $user = new User;
+//        $user->setUsername($username);
+//        //encode the password
+//        $factory = $this->container->get('security.encoder_factory');
+//        $encoder  = $factory->getEncoder($user);
+//        $encodedPassword = $encoder->encodePassword($password, $user->getSalt());
+//        ladybug_dump($encoder);
+//        $pass = 'admin';
+//        $password = hash('sha512', $pass, true);
+//        for ($i = 1; $i < 5000; $i++) {
+//            $password = hash('sha512', $password . $pass, true);
+//        }
+//        echo base64_encode($password);
+        $one = $this->getRequest()->getRequestFormat('jsp');
+        ladybug_dump($one);
+        $response = new Response('<div>hello</div>');
+        return $response;
+    }
     /**
      * Lists all Job entities.
      *
@@ -45,8 +71,20 @@ class JobController extends Controller
             $category->setActiveJobs($em->getRepository('IbwJobeetBundle:Job')->getActiveJobs($category->getId(), $this->container->getParameter('max_jobs_on_homepage')));
             $category->setMoreJobs($em->getRepository('IbwJobeetBundle:Job')->countActiveJobs($category->getId(), $this->container->getParameter('max_jobs_on_homepage')));
         }
-        return $this->render('IbwJobeetBundle:Job:index.html.twig', array(
-            'categories' => $categories
+        $latestJob = $em->getRepository('IbwJobeetBundle:Job')->getLatestPost();
+        if ($latestJob) {
+            $lastUpdated = $latestJob
+                ->getCreatedAt()
+                ->format(DATE_ATOM);
+        } else {
+            $lastUpdated = new \DateTime();
+            $lastUpdated = $lastUpdated->format(DATE_ATOM);
+        }
+        $format = $this->getRequest()->getRequestFormat();
+        return $this->render('IbwJobeetBundle:Job:index.' . $format . '.twig', array(
+            'categories' => $categories,
+            'lastUpdated' => $lastUpdated,
+            'feedId' => sha1($this->get('router')->generate('ibw_job', array('_format'=>'atom'), true))
         ));
     }
     /**
@@ -145,9 +183,9 @@ class JobController extends Controller
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Job entity.');
         }
-
         $session = $this->getRequest()->getSession();
         $jobs = $session->get('job_history', array());
+        //ladybug_dump($jobs);
         $job = array('id'=>$entity->getId(), 'position'=>$entity->getPosition(), 'company'=>$entity->getCompany(),'companyslug' => $entity->getCompanySlug(), 'locationslug' => $entity->getLocationSlug(), 'positionslug' => $entity->getPositionSlug());
         if (!in_array($job, $jobs)) {
             array_unshift($jobs, $job);
