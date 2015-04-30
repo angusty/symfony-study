@@ -91,7 +91,7 @@ class JobRepository extends EntityRepository
             ->orderBy('j.expires_at', 'DESC')
             ->setMaxResults(1);
         if ($category_id) {
-            $query = andWhere('j.category = :category_id')
+            $query->andWhere('j.category = :category_id')
                 ->setParameter('category_id', $category_id);
         }
         try {
