@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="341339cc-e8ed-4dc2-afe8-b2788a267725" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ibw/JobeetBundle/Controller/CategoryController.php" afterPath="$PROJECT_DIR$/src/Ibw/JobeetBundle/Controller/CategoryController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ibw/JobeetBundle/Entity/Repository/JobRepository.php" afterPath="$PROJECT_DIR$/src/Ibw/JobeetBundle/Entity/Repository/JobRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ibw/JobeetBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/Ibw/JobeetBundle/Resources/views/layout.html.twig" />
-    </list>
+    <list default="true" id="341339cc-e8ed-4dc2-afe8-b2788a267725" name="Default" comment="" />
     <ignored path="symfony-study.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -28,92 +24,7 @@
     <favorites_list name="symfony-study" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="JobController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Ibw/JobeetBundle/Controller/JobController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.16" vertical-offset="897" max-vertical-offset="7277">
-              <caret line="86" column="103" selection-start-line="85" selection-start-column="12" selection-end-line="86" selection-end-column="103" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JobRepository.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Ibw/JobeetBundle/Entity/Repository/JobRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.0" vertical-offset="1414" max-vertical-offset="2318">
-              <caret line="81" column="5" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CategoryController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Ibw/JobeetBundle/Controller/CategoryController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7912088" vertical-offset="112" max-vertical-offset="931">
-              <caret line="40" column="113" selection-start-line="40" selection-start-column="104" selection-end-line="40" selection-end-column="113" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Ibw/JobeetBundle/Resources/config/routing.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="608">
-              <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.atom.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Ibw/JobeetBundle/Resources/views/Job/index.atom.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.56" vertical-offset="0" max-vertical-offset="1273">
-              <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
-              <folding>
-                <marker date="1430382384703" expanded="true" signature="386:1874" placeholder="{% for category in categories ...%}" />
-                <marker date="1430382384703" expanded="true" signature="431:1853" placeholder="{% for entity in category.activejobs ...%}" />
-                <marker date="1430382384703" expanded="true" signature="1048:1436" placeholder="{% if entity.logo ...%}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Ibw/JobeetBundle/Resources/views/Category/show.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.36" vertical-offset="0" max-vertical-offset="1216">
-              <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.atom.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Ibw/JobeetBundle/Resources/views/Category/show.atom.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-25.84" vertical-offset="0" max-vertical-offset="760">
-              <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Ibw/JobeetBundle/Resources/views/layout.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.44" vertical-offset="891" max-vertical-offset="1710">
-              <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -163,8 +74,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="427" />
-    <option name="y" value="123" />
+    <option name="x" value="35" />
+    <option name="y" value="259" />
     <option name="width" value="1925" />
     <option name="height" value="1000" />
   </component>
@@ -521,8 +432,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="427" y="123" width="1925" height="1000" extended-state="0" />
-    <editor active="true" />
+    <frame x="35" y="259" width="1925" height="1000" extended-state="1" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -564,7 +475,14 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Ibw/JobeetBundle/Controller/CategoryController.php</url>
+          <line>18</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -873,19 +791,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Ibw/JobeetBundle/Resources/views/Job/index.atom.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.56" vertical-offset="0" max-vertical-offset="1273">
+        <state vertical-scroll-proportion="0.13919415" vertical-offset="0" max-vertical-offset="1273">
           <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
           <folding>
-            <marker date="1430382384703" expanded="true" signature="386:1874" placeholder="{% for category in categories ...%}" />
-            <marker date="1430382384703" expanded="true" signature="431:1853" placeholder="{% for entity in category.activejobs ...%}" />
-            <marker date="1430382384703" expanded="true" signature="1048:1436" placeholder="{% if entity.logo ...%}" />
+            <marker date="1430382384703" expanded="true" signature="-1:-1" placeholder="{% for category in categories ...%}" />
+            <marker date="1430382384703" expanded="true" signature="-1:-1" placeholder="{% for entity in category.activejobs ...%}" />
+            <marker date="1430382384703" expanded="true" signature="-1:-1" placeholder="{% if entity.logo ...%}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Ibw/JobeetBundle/Resources/views/Category/show.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.36" vertical-offset="0" max-vertical-offset="1216">
+        <state vertical-scroll-proportion="0.25518927" vertical-offset="0" max-vertical-offset="1216">
           <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
           <folding />
         </state>
@@ -893,7 +811,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Ibw/JobeetBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="608">
+        <state vertical-scroll-proportion="0.31516588" vertical-offset="0" max-vertical-offset="844">
           <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
           <folding />
         </state>
@@ -917,7 +835,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Ibw/JobeetBundle/Resources/views/layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.44" vertical-offset="891" max-vertical-offset="1710">
+        <state vertical-scroll-proportion="0.25763127" vertical-offset="891" max-vertical-offset="1710">
           <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
           <folding />
         </state>
@@ -925,7 +843,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Ibw/JobeetBundle/Resources/views/Category/show.atom.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.84" vertical-offset="0" max-vertical-offset="760">
+        <state vertical-scroll-proportion="0.7887668" vertical-offset="0" max-vertical-offset="819">
           <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
           <folding />
         </state>
