@@ -219,4 +219,17 @@ class Affiliate
             $this->created_at = new \DateTime();
         }
     }
+
+    /**
+     * @ORM\PrePersist
+     */
+    public function setTokenValue()
+    {
+        // Add your code here
+        if (!$this->getToken()) {
+            $token = sha1($this->getEmail() . rand(11111, 99999));
+            $this->token = $token;
+        }
+        return $this;
+    }
 }

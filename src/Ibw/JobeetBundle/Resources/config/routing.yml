@@ -25,3 +25,9 @@ logout:
 IbwJobeetBundle_category:
     pattern: /category/{slug}/{page}
     defaults: { _controller: IbwJobeetBundle:Category:show, page: 1 }
+
+IbwJobeetBundle_api:
+    path: /api/{token}/jobs.{_format}
+    defaults: {_controller: "IbwJobeetBundle:Api:list"}
+    requirements:
+        _format: xml|json|yaml|yml
