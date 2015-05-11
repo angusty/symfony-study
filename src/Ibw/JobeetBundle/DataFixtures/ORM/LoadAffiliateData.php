@@ -20,7 +20,7 @@ class LoadAffiliateData extends AbstractFixture
         $affiliate = new Affiliate();
         $affiliate->setUrl('http://sensio-lobs.com/');
         $affiliate->setEmail('8236138@qq.com');
-        //$affiliate->setToken('sensio-labs');
+        $affiliate->setToken('sensio-labs');
         $affiliate->setIsActive(true);
         $affiliate->addCategory($em->merge($this->getReference('category-programming')));
 
@@ -28,7 +28,7 @@ class LoadAffiliateData extends AbstractFixture
         $affiliate = new Affiliate();
         $affiliate->setUrl('/');
         $affiliate->setEmail('yboker1982@gmail.com');
-        //$affiliate->setToken('symfony');
+        $affiliate->setToken('symfony');
         $affiliate->setIsActive(false);
         $affiliate->addCategory($em->merge($this->getReference('category-programming')), $em->merge($this->getReference('category-design')));
         $em->persist($affiliate);
