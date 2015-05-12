@@ -26,7 +26,7 @@ class AffiliateController extends Controller
         $form->submit($request);
 
         if ($form->isValid()) {
-            $formData = $request->get('affiliate');
+            $formData = $request->get('ibw_jobeetbundle_affiliate');
             $affiliate->setUrl($formData['url']);
             $affiliate->setEmail($formData['email']);
             $affiliate->setIsActive(false);

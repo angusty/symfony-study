@@ -6,3 +6,7 @@ ibw_affiliate_create:
     path: /create
     defaults: { _controller: "IbwJobeetBundle:Affiliate:create" }
     requirements: { _method: post }
+
+ibw_affiliate_wait:
+    path: /wait
+    defaults: { _controller: "IbwJobeetBundle:Affiliate:wait" }

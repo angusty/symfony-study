@@ -17,7 +17,7 @@ class AffiliateType extends AbstractType
         $builder
             ->add('url')
             ->add('email')
-            ->add('token')
+            //->add('token')
             //->add('is_active')
             //->add('created_at')
             ->add('categories', null, array('expanded' => true))
