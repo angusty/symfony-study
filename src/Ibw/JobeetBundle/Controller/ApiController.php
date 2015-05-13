@@ -29,7 +29,8 @@ class ApiController extends Controller
                 'location' => $job->getLocationSlug(),
                 'id' => $job->getId(),
                 'position' => $job->getPositionSlug()),
-                true)]
+                true
+            )]
                 = $job->asArray($request->getHost());
         }
 
