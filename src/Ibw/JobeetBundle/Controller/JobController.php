@@ -18,7 +18,7 @@ use Symfony\Component\HttpFoundation\Response;
 class JobController extends Controller
 {
 
-    public function testAction()
+    public function testAction(Request $request)
     {
         //$em = $this->container->get('doctrine')->getManager();
 //        $username = 'admin_test';
@@ -36,8 +36,11 @@ class JobController extends Controller
 //            $password = hash('sha512', $password . $pass, true);
 //        }
 //        echo base64_encode($password);
-        $one = $this->getRequest()->getRequestFormat('jsp');
-        ladybug_dump($one);
+//        $one = $this->getRequest()->getRequestFormat('jsp');
+//        $get = $request->query->get('name');
+//        $post = $request->request->get('name');
+//        echo 'test: ', $post;
+        //ladybug_dump($request);
         $response = new Response('<div>hello</div>');
         return $response;
     }
