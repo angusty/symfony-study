@@ -41,7 +41,15 @@ class JobController extends Controller
 //        $post = $request->request->get('name');
 //        echo 'test: ', $post;
         //ladybug_dump($request);
-        $response = new Response('<div>hello</div>');
+        $message = \Swift_Message::newInstance()
+            ->setSubject('邮件发送测试x')
+            ->setFrom('yboker1982@gmail.com')
+            ->setTo('8236138@qq.com')
+            ->setBody('<div>邮件发送测试</div>');
+
+        $return = $this->get('mailer')->send($message);
+        ladybug_dump($return);
+        $response = new Response('<div>发送邮件设置</div>');
         return $response;
     }
     /**

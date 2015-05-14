@@ -233,7 +233,7 @@ class Affiliate
         return $this;
     }
 
-    public function active()
+    public function activate()
     {
         if (!$this->getIsActive()) {
             $this->setIsActive(true);
