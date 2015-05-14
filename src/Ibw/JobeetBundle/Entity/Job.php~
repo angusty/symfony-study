@@ -634,4 +634,54 @@ class Job
     {
         $this->setIsActivated(true);
     }
+
+    public function asArray($host)
+    {
+        return array(
+            'category' => $this->getCategory()->getName(),
+            'type' => $this->getType(),
+            'company' => $this->getCompany(),
+            'logo' => $this->getLogo() ? 'http://' . $host . '/uploads/jobs/' . $this->getLogo() : null,
+            'url' => $this->getUrl(),
+            'position' => $this->getPosition(),
+            'location' => $this->getLocation(),
+            'description' => $this->getDescription(),
+            'how_to_apply' => $this->getHowToApply(),
+            'expires_at' => $this->getCreatedAt()->format('Y-m-d H:i:s')
+        );
+    }
+
+    //返回一个已存在的索引或新建的索引
+    public static function getLuceneIndex()
+    {
+        if (file_exists($index = self::getLuceneIndexFile())) {
+            return \Zend_Search_Lucene::open($index);
+        }
+        return \Zend_Search_Lucene::create($index);
+    }
+
+    public static function getLuceneIndexfile()
+    {
+        return __DIR__ . '/../../../../web/data/job.index';
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
