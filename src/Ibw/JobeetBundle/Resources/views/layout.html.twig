@@ -8,6 +8,7 @@
     {% block stylesheets %}
         <link rel="stylesheet" href="{{ asset('bundles/ibwjobeet/css/main.css') }}" type="text/css" media="all"/>
     {% endblock %}
+
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}"/>
     <link rel="application/atom+xml" title="最近工作" href="{{ url('ibw_job', {'_format':'atom'}) }}"/>
 </head>
@@ -82,6 +83,7 @@
     </div>
 </div>
     {% block javascripts %}
-    {%  endblock %}
+        <script type="text/javascript" src="{{ asset('bundles/ibwjobeet/js/jquery-2.1.4.js') }}"></script>
+    {% endblock %}
 </body>
 </html>
