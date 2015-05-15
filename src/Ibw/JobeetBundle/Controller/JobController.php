@@ -77,8 +77,7 @@ class JobController extends Controller
 //            'entities' => $entities,
 //        ));
         $categories = $em->getRepository('IbwJobeetBundle:Category')->getWithJobs();
-        foreach($categories as $category) {
-
+        foreach ($categories as $category) {
             $category->setActiveJobs($em->getRepository('IbwJobeetBundle:Job')->getActiveJobs($category->getId(), $this->container->getParameter('max_jobs_on_homepage')));
             $category->setMoreJobs($em->getRepository('IbwJobeetBundle:Job')->countActiveJobs($category->getId(), $this->container->getParameter('max_jobs_on_homepage')));
         }
@@ -391,5 +390,18 @@ class JobController extends Controller
 //            ->add('submit', 'submit', array('label' => 'Delete'))
 //            ->getForm()
 //        ;
+    }
+
+    public function searchAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $query = $this->getRequest()->get('query');
+        if (!$query) {
+            return $this->redirect($this->generateUrl('ibw_job'));
+        }
+        $jobs = $em->getRepository('IbwJobeetBundle:Job')->getForLuceneQuery($query);
+        return $this->render('IbwJobeetBundle:Job:search.html.twig', array(
+            'jobs' => $jobs
+        ));
     }
 }

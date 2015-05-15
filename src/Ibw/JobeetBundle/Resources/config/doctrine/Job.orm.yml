@@ -64,7 +64,7 @@ Ibw\JobeetBundle\Entity\Job:
         preUpdate: [ preUpload, setUpdatedAtValue ]
         postPersist: [ upload, updateLuceneIndex ]
         postUpdate: [ upload, updateLuceneIndex ]
-        postRemove: [ removeUpload ]
+        postRemove: [ removeUpload, deleteLuceneIndex ]
 
 
 

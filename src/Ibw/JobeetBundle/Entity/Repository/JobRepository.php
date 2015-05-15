@@ -3,7 +3,7 @@
 namespace Ibw\JobeetBundle\Entity\Repository;
 
 use Doctrine\ORM\EntityRepository;
-
+use Ibw\JobeetBundle\Entity\Job;
 /**
  * JobRepository
  *
@@ -84,7 +84,7 @@ class JobRepository extends EntityRepository
             ->delete()
             ->where('j.is_activated IS NULL')
             ->andWhere('j.created_at < :created_at')
-            ->setParameter('created_at',  date('Y-m-d', time() - 86400 * $days))
+            ->setParameter('created_at', date('Y-m-d', time() - 86400 * $days))
             ->getQuery();
         return $query->execute();
     }
@@ -104,10 +104,35 @@ class JobRepository extends EntityRepository
         }
         try {
             $job = $query->getQuery()->getSingleResult();
-        } catch(\Doctrine\Orm\NoResultException $e) {
+        } catch (\Doctrine\Orm\NoResultException $e) {
             $job = null;
         }
         return $job;
+    }
+
+    public function getForLuceneQuery($query)
+    {
+        $hits = Job::getLuceneIndex()->find($query);
+
+        //ladybug_dump($hits);
+        $pks = array();
+        foreach ($hits as $hit) {
+            $pks[] = $hit->pk;
+        }
+
+        if (empty($pks)) {
+            return array();
+        }
+
+        $q = $this
+            ->createQueryBuilder('j')
+            ->where('j.id IN (:pks)')
+            ->setParameter('pks', $pks)
+            ->andWhere('j.is_activated = :active')
+            ->setParameter('active', 1)
+            ->setMaxResults(20)
+            ->getQuery();
+        return $q->getResult();
     }
 }
 

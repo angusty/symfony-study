@@ -698,4 +698,16 @@ class Job
         $index->commit();
 
     }
+
+    /**
+     * @ORM\PostRemove
+     */
+    public function deleteLuceneIndex()
+    {
+        // Add your code here
+        $index = self::getLuceneIndex();
+        foreach ($index->find('pk:' . $this->getId()) as $hit) {
+            $index->delete($hit->id);
+        }
+    }
 }

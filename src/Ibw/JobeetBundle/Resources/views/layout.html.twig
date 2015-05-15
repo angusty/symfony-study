@@ -35,15 +35,15 @@
                     <h2>寻找人</h2>
                     <div><a href="{{ path('ibw_job_new') }}">发布招聘</a></div>
                 </div>
+
                 <div class="search">
                     <h2>寻找工作</h2>
-                    <form action="">
-                        <input type="text" name="keywords" id="search_keywords"/>
+                    <form action="{{ path('ibw_job_search') }}" method="get">
+                        <input type="text" name="query" value="{{ app.request.get('query') }}" id="search_keywords" />
                         <input type="submit" value="搜索" />
                         <div class="help">请输入一些关键字（城市，国家，地点，...）</div>
                     </form>
                 </div>
-
 
             </div>
         </div>
