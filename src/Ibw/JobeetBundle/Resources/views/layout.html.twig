@@ -42,6 +42,7 @@
                     <form action="{{ path('ibw_job_search') }}" method="get">
                         <input type="text" name="query" value="{{ app.request.get('query') }}" id="search_keywords" />
                         <input type="submit" value="搜索" />
+                        <img src="{{ asset('bundles/ibwjobeet/images/loader.gif') }}" alt="loader" style="vertical-align: middle;display: none"/>
                         <div class="help">请输入一些关键字（城市，国家，地点，...）</div>
                     </form>
                 </div>
