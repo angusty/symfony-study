@@ -56,8 +56,12 @@ class JobController extends Controller
      * Lists all Job entities.
      *
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
+        $route  = $request->get('_route');
+        if ($route === 'IbwJobeetBundle_nonlocalized') {
+            return $this->redirect($this->generateUrl('ibw_jobeet_homepage'));
+        }
         $factory = $this->container->get('security.encoder_factory');
         //ladybug_dump($factory);
         //echo hash('sha512', 'admin');

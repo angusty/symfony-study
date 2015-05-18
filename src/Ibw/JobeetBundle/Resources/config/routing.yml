@@ -9,8 +9,10 @@ ibw_jobeet_ibw_job:
     prefix:   /job
 
 ibw_jobeet_homepage:
-    path:     /
+    path:     /{_locale}/
     defaults: { _controller: IbwJobeetBundle:Job:index }
+    requirements:
+      _locale: en|zh
 
 login:
     path: /login
@@ -23,8 +25,10 @@ logout:
     path: /logout
 
 IbwJobeetBundle_category:
-    pattern: /category/{slug}/{page}
+    pattern: /{_locale}/category/{slug}/{page}
     defaults: { _controller: IbwJobeetBundle:Category:show, page: 1 }
+    requirements:
+      _locale: en|zh
 
 IbwJobeetBundle_api:
     path: /api/{token}/jobs.{_format}
@@ -34,4 +38,15 @@ IbwJobeetBundle_api:
 
 ibw_jobeet_affiliate:
     resource: "@IbwJobeetBundle/Resources/config/routing/affiliate.yml"
-    prefix: /affiliate
+    prefix: /{_locale}/affiliate
+    requirements:
+      _locale: en|zh
+
+IbwJobeetBundle_changeLanguage:
+  path: /change_language
+  defaults: { _controller: 'IbwJobeetBundle:Default:changeLanguage'}
+
+
+IbwJobeetBundle_nonlocalized:
+  path: /
+  defaults: { _controller: "IbwJobeetBundle:Job:index"}

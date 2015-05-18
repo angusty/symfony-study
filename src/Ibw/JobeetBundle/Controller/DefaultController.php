@@ -3,6 +3,7 @@
 namespace Ibw\JobeetBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\SecurityContext;
 
 class DefaultController extends Controller
@@ -27,6 +28,18 @@ class DefaultController extends Controller
             'error' => $error,
         ));
 
+    }
+
+    public function changeLanguageAction()
+    {
+        $request = $this->getRequest();
+        $language = $request->get('language');
+        return $this->redirect(
+            $this->generateUrl(
+                'ibw_jobeet_homepage',
+                array('_locale' => $language)
+            )
+        );
     }
 }
 

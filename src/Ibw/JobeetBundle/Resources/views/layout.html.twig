@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>
-        {% block title %}Jobeet - 你最好的找工作平台{% endblock %}
+        {% block title %}
+          {% trans %}Jobeet - Your best job board{% endtrans %}
+        {% endblock %}
     </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     {% block stylesheets %}
         <link rel="stylesheet" href="{{ asset('bundles/ibwjobeet/css/main.css') }}" type="text/css" media="all"/>
     {% endblock %}
 
-    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}"/>
+    <link rel="shortcut icon" href="{{ asset('bundles/ibwjobeet/images/favicon.ico') }}"/>
     <link rel="application/atom+xml" title="最近工作" href="{{ url('ibw_job', {'_format':'atom'}) }}"/>
 </head>
 <body>
@@ -33,17 +36,19 @@
             <h1><a href="{{ path('ibw_jobeet_homepage') }}"><img src="{{ asset('bundles/ibwjobeet/images/logo.jpg') }}" alt="logo"/></a></h1>
             <div id="sub_header">
                 <div class="post">
-                    <h2>寻找人</h2>
-                    <div><a href="{{ path('ibw_job_new') }}">发布招聘</a></div>
+                    <h2>{% trans %}Ask for people{% endtrans %}</h2>
+                    <div><a href="{{ path('ibw_job_new') }}">
+                        {% trans %}Post a Job{% endtrans %}
+                      </a></div>
                 </div>
 
                 <div class="search">
-                    <h2>寻找工作</h2>
+                    <h2>{% trans %}Ask for a job{% endtrans %}</h2>
                     <form action="{{ path('ibw_job_search') }}" method="get">
                         <input type="text" name="query" value="{{ app.request.get('query') }}" id="search_keywords" />
                         <input type="submit" value="搜索" />
                         <img src="{{ asset('bundles/ibwjobeet/images/loader.gif') }}" alt="loader" style="vertical-align: middle;display: none"/>
-                        <div class="help">请输入一些关键字（城市，国家，地点，...）</div>
+                        <div class="help">{% trans %}Enter some keywords (city, country, position, ...){% endtrans %}</div>
                     </form>
                 </div>
 
@@ -68,6 +73,15 @@
     </div>
     <div id="footer">
         <div class="content">
+          <form action="{{ path('IbwJobeetBundle_changeLanguage') }}" method="get">
+            <label for="">{% trans %}Language{% endtrans %}</label>
+            <select name="language">
+              <option value="en" {% if app.request.get('_locale') == 'en' %}selected="selected"{% endif %}>English</option>
+              <option value="zh" {% if app.request.get('_locale') == 'zh' %}selected="selected" {% endif %}>中文</option>
+            </select>
+            <input type="submit" value="OK"/>
+          </form>
+
             <span class="symfony">
                 <img src="{{ asset('bundles/ibwjobeet/images/jobeet-mini.png') }}" alt="来自"/>
                 来自<a href="http://angusty.com">
@@ -75,10 +89,10 @@
                 </a>
             </span>
             <ul>
-                <li><a href="">关于 Jobeet</a></li>
-                <li class="feed"><a href="{{ path('ibw_job', {'_format': 'atom'}) }}">Full feed</a></li>
+                <li><a href="">{% trans %}About Jobeet{% endtrans %}</a></li>
+                <li class="feed"><a href="{{ path('ibw_job', {'_format': 'atom'}) }}">{% trans %}Full feed{% endtrans %}</a></li>
                 <li><a href="">Jobeet API</a></li>
-                <li class="last"><a href="{{ path('ibw_affiliate_new') }}">Become an affiliate</a></li>
+                <li class="last"><a href="{{ path('ibw_affiliate_new') }}">{% trans %}Become an affiliate{% endtrans %}</a></li>
             </ul>
         </div>
     </div>
