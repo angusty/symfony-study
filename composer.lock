@@ -2243,17 +2243,17 @@
         },
         {
             "name": "symfony/expression-language",
-            "version": "v2.6.6",
+            "version": "v2.6.7",
             "target-dir": "Symfony/Component/ExpressionLanguage",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/expression-language.git",
-                "reference": "e5a515aa0738c1af3013127b747072124ff3da0b"
+                "reference": "f4cffea2eca850203d28209a5cbad5ad2e34b243"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/expression-language/zipball/e5a515aa0738c1af3013127b747072124ff3da0b",
-                "reference": "e5a515aa0738c1af3013127b747072124ff3da0b",
+                "url": "https://api.github.com/repos/symfony/expression-language/zipball/f4cffea2eca850203d28209a5cbad5ad2e34b243",
+                "reference": "f4cffea2eca850203d28209a5cbad5ad2e34b243",
                 "shasum": ""
             },
             "require": {
@@ -2279,17 +2279,17 @@
             ],
             "authors": [
                 {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                },
-                {
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
                 }
             ],
             "description": "Symfony ExpressionLanguage Component",
-            "homepage": "http://symfony.com",
-            "time": "2015-03-17 06:52:13"
+            "homepage": "https://symfony.com",
+            "time": "2015-05-01 14:14:24"
         },
         {
             "name": "symfony/monolog-bundle",
@@ -2409,16 +2409,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.3.27",
+            "version": "v2.3.28",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "ce4aab1508dd9642906fc9a120e0d8763e689896"
+                "reference": "56bc4057e3849d38aeb5e9742bc800b0518fe1f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/ce4aab1508dd9642906fc9a120e0d8763e689896",
-                "reference": "ce4aab1508dd9642906fc9a120e0d8763e689896",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/56bc4057e3849d38aeb5e9742bc800b0518fe1f0",
+                "reference": "56bc4057e3849d38aeb5e9742bc800b0518fe1f0",
                 "shasum": ""
             },
             "require": {
@@ -2513,7 +2513,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-04-01 14:28:26"
+            "time": "2015-05-10 15:02:48"
         },
         {
             "name": "twig/extensions",
