@@ -7,7 +7,7 @@ $(document).ready(function()
       $('#loader').show();
       $('#jobs').load(
         $(this).parent('form').attr('action'),
-        { query: this.value ? thsi.value + '*' : this.value },
+        { query: this.value ? this.value + '*' : this.value },
         function() {
           $('#loader').hide();
         }
